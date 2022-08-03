@@ -24,15 +24,20 @@ function createRows(rowNum) {
 
 createRows(pickedNum);
 
-//eventlistner change color of cells
+//draw button
 
 const cells = document.querySelectorAll('.divCell');
 
-cells.forEach((cell) => {
-    cell.addEventListener ('mouseover', () => {
-        cell.classList.add('colorChange');
+const drawBtn = document.getElementById("drawBtn");
+
+function draw() {
+    cells.forEach((cell) => {
+        cell.addEventListener ('mouseover', () => {
+            cell.classList.add('colorChange');
+        })
     })
-})
+}
+drawBtn.addEventListener('click', draw);
 
 //eraser button
 
