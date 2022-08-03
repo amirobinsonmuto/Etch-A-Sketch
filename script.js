@@ -24,41 +24,55 @@ function createRows(rowNum) {
 
 createRows(pickedNum);
 
-//draw button
-
+//declare a variable for .divCell
 const cells = document.querySelectorAll('.divCell');
 
-const drawBtn = document.getElementById("drawBtn");
-
-function draw() {
+//color picker function
+function pickColor() {
+    let color = document.getElementById('colorpicker').value;
     cells.forEach((cell) => {
         cell.addEventListener ('mouseover', () => {
-            cell.classList.add('colorChange');
+            cell.style.backgroundColor = color;
         })
     })
+    // colorChange.style.backgroundColor = color;
 }
-drawBtn.addEventListener('click', draw);
+
+//draw button
+const drawBtn = document.getElementById("drawBtn");
+
+// function draw() {
+//     cells.forEach((cell) => {
+//         cell.addEventListener ('mouseover', () => {
+//             cell.classList.add('colorChange');
+//         })
+//     })
+// }
+
+drawBtn.addEventListener('click', () => {
+    // draw();
+    pickColor();
+});
+
 
 //eraser button
-
 const eraserBtn = document.getElementById("eraserBtn");
 
 function erase() {
     cells.forEach((cell) => {
         cell.addEventListener ('mouseover', () => {
-            cell.classList.remove('colorChange');
+            cell.style.backgroundColor = '#FFFFFF';
         })
     })
 }
 eraserBtn.addEventListener('click', erase);
 
 //reset button
-
 const resetBtn = document.getElementById("resetBtn");
 
 function reset() {
     cells.forEach((cell) => {
-        cell.classList.remove('colorChange');
+        cell.style.backgroundColor = '#FFFFFF';
     })
 }
 resetBtn.addEventListener('click', reset);
