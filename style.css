@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    width: 860px;
+    height: 860px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+}  
+
+.hidden {
+    display: none;
+}
+
+.divRow {
+    height: 100%;
+    display: flex;
+}
+
+.divCell {
+    width: 100%;
+    border: 1px solid grey;
+}
+
+.colorChange {
+    background-color: red;
+}
+
+button {
+    width: 100px;
+}
+    
