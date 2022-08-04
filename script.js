@@ -17,7 +17,7 @@ function createRows(rowNum) {
     }
 }
 
-//Prompt window for a visitor to pick a number
+//Prompt window for a visitor to pick a number and execute createRow function
 let pickedNum = prompt("Pick a number 2-100", "");
 
 while (pickedNum < 2 || pickedNum >100) {
@@ -37,7 +37,6 @@ function pickColorAndDraw() {
             cell.style.backgroundColor = color;
         })
     })
-    // colorChange.style.backgroundColor = color;
 }
 
 //draw button
@@ -46,7 +45,6 @@ const drawBtn = document.getElementById("drawBtn");
 drawBtn.addEventListener('click', () => {
     pickColorAndDraw();
 });
-
 
 //eraser button
 const eraserBtn = document.getElementById("eraserBtn");
